@@ -1,0 +1,16 @@
+<div *ngFor="let data of reviewForm">
+    <label>Question:</label>&nbsp;&nbsp;&nbsp;<span>{{data.question}}</span><br />
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" [(ngModel)]="radioSelect" id="flexRadioDefault1" (change)="OnItemChange(radioSelect)" value="{{data.secondChoice}}">
+        <label class="form-check-label" for="flexRadioDefault1">
+            {{data.secondChoice}}
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [(ngModel)]="radioSelect" (change)="OnItemChange(radioSelect)" value="{{data.firstChoice}}">
+        <label class="form-check-label" for="flexRadioDefault2">
+            {{data.firstChoice}}
+        </label>
+    </div>
+</div>

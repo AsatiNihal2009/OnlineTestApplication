@@ -1,0 +1,34 @@
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Enter Quiz Questions</p>
+        </div>
+
+        <form [formGroup]="quizForm" (ngSubmit)="onSubmit(quizForm)" *ngIf="this.quizForm" novalidate>
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="question">Enter Question</label>
+                            <input type="text" class="form-control" placeholder="Your Question" name="question" id="question" formControlName="question"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstChoice">Enter First Choice</label>
+                            <input type="text" class="form-control" placeholder="First Choice" name="firstChoice" id="firstChoice" formControlName="firstChoice"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="secondChoice">Enter Second Choice</label>
+                            <input type="text" class="form-control" placeholder="Second Choice" name="secondChoice" id="secondChoice" formControlName="secondChoice"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="answer">Enter Correct Answer</label>
+                            <input type="text" class="form-control" placeholder="Correct Answer" name="answer" id="answer" formControlName="answer"/>
+                        </div>
+                    </div>
+                </div>
+                <button  class="btn btn-default" (click)="resetForm(quizForm)">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
